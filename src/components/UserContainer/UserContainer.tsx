@@ -7,8 +7,8 @@ interface UserContainerProps {
 export default function UserContainer({ user }: UserContainerProps) {
     return (
         <>
-            <div className="flex flex-col items-center justify-center text-xl">
-                <div className="bg-blue-900 items-center justify-start p-4 m-2 rounded-3xl text-white min-w-110 shadow-xl">
+            <div className="flex flex-col items-center justify-center text-xl mx-10">
+                <div className="bg-blue-900 items-center justify-start p-4 my-2 rounded-3xl mx-5 text-white w-full shadow-xl">
                     <div>
                         <span className="font-bold">Nome:</span> <span className="capitalize">{user.username}</span>
                     </div>

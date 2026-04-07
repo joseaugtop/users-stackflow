@@ -4,7 +4,7 @@ interface ButtonProps {
 }
 
 export default function Button({ className, children }: ButtonProps) {
-    const padding = className.match(/p-\d/) ? "" : "p-3";
+    const padding = className?.match(/p-\d/) ? "" : "p-3";
     return (
         <>
             <button

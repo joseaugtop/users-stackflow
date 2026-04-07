@@ -1,49 +1,38 @@
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import './Home.css'
 import CreateUserForm from '../../components/CreateUserForm/CreateUserForm'
-import type { User } from '../../types/User'
 import UserContainer from '../../components/UserContainer/UserContainer'
+import { useQuery } from '@tanstack/react-query'
+import { getUsers } from '../../services/userService'
 
-function App() {
-  const queryClient = new QueryClient()
-  const users: User[] = [
-    {
-      username: "ana",
-      age: 19,
-      email: "ana@email.com"
-    },
-    {
-      username: "bruno",
-      age: 25,
-      email: "bruno@email.com"
-    },
-    {
-      username: "carla",
-      age: 22,
-      email: "carla@email.com"
-    },
-    {
-      username: "diego",
-      age: 30,
-      email: "diego@email.com"
-    },
-    {
-      username: "elaine",
-      age: 27,
-      email: "elaine@email.com"
-    }
-  ];
+function Home() {
+
+  const { isPending, error, data } = useQuery({
+    queryKey: ['usersData'],
+    queryFn: () =>
+      getUsers()
+  })
+
+
+  if (error) return 'An error has occurred: ' + error.message
+
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className='bg-blue-700 min-h-screen'>
-        <CreateUserForm />
-        {users.map(user => (
-          <UserContainer key={user.username} user={user} />
-        ))}
-      </div>
-    </QueryClientProvider>
+    <>
+      <h1 className='flex mx-5 text-white text-4xl'>Criar Usuário</h1>
+      <CreateUserForm />
+      <hr className=' border-blue-600 border my-5 shadow-2xl' />
+      <h1 className='flex mx-5 text-white text-4xl'>Lista de Usuários</h1>
+      {isPending ? (
+        <div>loading</div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-5 my-5">
+          {data.map((user) => (
+            <UserContainer key={user.id} user={user} />
+          ))}
+        </div>
+      )}
+    </>
   )
 }
 
-export default App
+export default Home

@@ -5,7 +5,7 @@ export default function CreateUserForm() {
     return (
         <>
             <div className="flex items-center justify-center">
-                <form className="bg-blue-900 items-center justify-start p-4 m-2 rounded-xl text-white min-w-110 shadow-xl">
+                <form className="bg-blue-900 items-center justify-start p-4 m-2 rounded-xl text-white w-full max-w-lg shadow-xl">
                     <h1 className="text-center text-2xl">Cadastro de Usuários</h1>
                     <div className="flex flex-col my-3 gap-3">
                         <input type="text" name="name" placeholder="Nome" className="bg-white/10 rounded-3xl p-2" />

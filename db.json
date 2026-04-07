@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "id": "a1B2c3D4E5",
+      "username": "ana",
+      "age": 19,
+      "email": "ana@email.com"
+    },
+    {
+      "id": "F6g7H8i9J0",
+      "username": "bruno",
+      "age": 25,
+      "email": "bruno@email.com"
+    },
+    {
+      "id": "K1l2M3n4O5",
+      "username": "carla",
+      "age": 22,
+      "email": "carla@email.com"
+    },
+    {
+      "id": "P6q7R8s9T0",
+      "username": "diego",
+      "age": 30,
+      "email": "diego@email.com"
+    },
+    {
+      "id": "U1v2W3x4Y5",
+      "username": "elaine",
+      "age": 27,
+      "email": "elaine@email.com"
+    },
+    {
+      "id": "Z6a7B8c9D0",
+      "username": "felipe",
+      "age": 24,
+      "email": "felipe@email.com"
+    },
+    {
+      "id": "E1f2G3h4I5",
+      "username": "gabriela",
+      "age": 28,
+      "email": "gabriela@email.com"
+    },
+    {
+      "id": "J6k7L8m9N0",
+      "username": "henrique",
+      "age": 31,
+      "email": "henrique@email.com"
+    },
+    {
+      "id": "O1p2Q3r4S5",
+      "username": "erick",
+      "age": 19,
+      "email": "erick@email.com"
+    },
+    {
+      "username": "teste",
+      "age": 19,
+      "email": "georgie@email.com",
+      "id": "HQypy-im4Wk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
