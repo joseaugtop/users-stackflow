@@ -3,6 +3,7 @@ import CreateUserForm from '../../components/CreateUserForm/CreateUserForm'
 import UserContainer from '../../components/UserContainer/UserContainer'
 import { useQuery } from '@tanstack/react-query'
 import { getUsers } from '../../services/userService'
+import { Spinner } from '@/components/ui/spinner'
 
 function Home() {
 
@@ -23,7 +24,7 @@ function Home() {
       <hr className=' border-blue-600 border my-5 shadow-2xl' />
       <h1 className='flex mx-5 text-white text-4xl'>Lista de Usuários</h1>
       {isPending ? (
-        <div>loading</div>
+        <div><Spinner /></div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-5 my-5">
           {data.map((user) => (
