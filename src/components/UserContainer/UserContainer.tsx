@@ -6,20 +6,23 @@ interface UserContainerProps {
 
 export default function UserContainer({ user }: UserContainerProps) {
     return (
-        <>
-            <div className="flex flex-col items-center justify-center text-xl mx-10">
-                <div className="bg-blue-900 items-center justify-start p-4 my-2 rounded-3xl mx-5 text-white w-full shadow-xl">
-                    <div>
-                        <span className="font-bold">Nome:</span> <span className="capitalize">{user.username}</span>
-                    </div>
-                    <div>
-                        <span className="font-bold">Idade:</span> {user.age}
-                    </div>
-                    <div>
-                        <span className="font-bold">Email:</span> {user.email}
-                    </div>
-                </div>
+        <div className="bg-blue-900 p-4 rounded-xl text-white text-xl shadow-xl space-y-2">
+
+            <div className="flex gap-2">
+                <span className="font-bold">Nome:</span>
+                <span className="capitalize">{user.username}</span>
             </div>
-        </>
+
+            <div className="flex gap-2">
+                <span className="font-bold">Idade:</span>
+                <span>{user.age}</span>
+            </div>
+
+            <div className="flex gap-2">
+                <span className="font-bold">Email:</span>
+                <span>{user.email}</span>
+            </div>
+
+        </div>
     )
 }
