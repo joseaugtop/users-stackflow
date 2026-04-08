@@ -55,11 +55,142 @@
       "email": "erick@email.com"
     },
     {
-      "username": "teste",
-      "age": 19,
-      "email": "georgie@email.com",
-      "id": "HQypy-im4Wk"
+      "id": "T6u7V8w9X0",
+      "username": "isabela",
+      "age": 23,
+      "email": "isabela@email.com"
+    },
+    {
+      "id": "Y1z2A3b4C5",
+      "username": "joao",
+      "age": 26,
+      "email": "joao@email.com"
+    },
+    {
+      "id": "D6e7F8g9H0",
+      "username": "karina",
+      "age": 29,
+      "email": "karina@email.com"
+    },
+    {
+      "id": "I1j2K3l4M5",
+      "username": "lucas",
+      "age": 21,
+      "email": "lucas@email.com"
+    },
+    {
+      "id": "N6o7P8q9R0",
+      "username": "mariana",
+      "age": 32,
+      "email": "mariana@email.com"
+    },
+    {
+      "id": "N6o7P8q9da",
+      "username": "maria",
+      "age": 2,
+      "email": "maria@email.com"
+    },
+    {
+      "id": "N6awP8q9R0",
+      "username": "mario",
+      "age": 12,
+      "email": "mario@email.com"
+    },
+    {
+      "id": "S1t2U3v4W5",
+      "username": "nicolas",
+      "age": 20,
+      "email": "nicolas@email.com"
+    },
+    {
+      "id": "X6y7Z8a9B0",
+      "username": "olivia",
+      "age": 27,
+      "email": "olivia@email.com"
+    },
+    {
+      "id": "C1d2E3f4G5",
+      "username": "paulo",
+      "age": 34,
+      "email": "paulo@email.com"
+    },
+    {
+      "id": "H6i7J8k9L0",
+      "username": "renata",
+      "age": 28,
+      "email": "renata@email.com"
+    },
+    {
+      "id": "M1n2O3p4Q5",
+      "username": "rodrigo",
+      "age": 33,
+      "email": "rodrigo@email.com"
+    },
+    {
+      "id": "R6s7T8u9V0",
+      "username": "sabrina",
+      "age": 24,
+      "email": "sabrina@email.com"
+    },
+    {
+      "id": "W1x2Y3z4A5",
+      "username": "thiago",
+      "age": 29,
+      "email": "thiago@email.com"
+    },
+    {
+      "id": "B6c7D8e9F0",
+      "username": "ursula",
+      "age": 26,
+      "email": "ursula@email.com"
+    },
+    {
+      "id": "G1h2I3j4K5",
+      "username": "vinicius",
+      "age": 31,
+      "email": "vinicius@email.com"
+    },
+    {
+      "id": "L6m7N8o9P0",
+      "username": "willian",
+      "age": 35,
+      "email": "willian@email.com"
+    },
+    {
+      "id": "Q1r2S3t4U5",
+      "username": "xavier",
+      "age": 22,
+      "email": "xavier@email.com"
+    },
+    {
+      "id": "V6w7X8y9Z0",
+      "username": "yasmin",
+      "age": 23,
+      "email": "yasmin@email.com"
+    },
+    {
+      "id": "A1b2C3d4E6",
+      "username": "zoe",
+      "age": 21,
+      "email": "zoe@email.com"
+    },
+    {
+      "id": "F7g8H9i0J1",
+      "username": "andre",
+      "age": 28,
+      "email": "andre@email.com"
+    },
+    {
+      "id": "K2l3M4n5O6",
+      "username": "bianca",
+      "age": 25,
+      "email": "bianca@email.com"
+    },
+    {
+      "id": "P7q8R9s0T1",
+      "username": "cesar",
+      "age": 30,
+      "email": "cesar@email.com"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

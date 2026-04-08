@@ -15,7 +15,7 @@ export default function Example() {
     if (error) return 'An error has occurred: ' + error.message
 
     return (
-        <div className='text-white'>
+        <div className=''>
             {data.map((user: User) => (
                 <div key={user.id}>
                     <p>{user.username}</p>

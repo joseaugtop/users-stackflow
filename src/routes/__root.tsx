@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link, Outlet, createRootRoute } from '@tanstack/react-router'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
-
+import { NuqsAdapter } from 'nuqs/adapters/tanstack-router'
 export const Route = createRootRoute({
   component: RootComponent,
 })
@@ -12,7 +12,7 @@ function RootComponent() {
   return (
     <React.Fragment>
       <QueryClientProvider client={queryClient}>
-        <div className='bg-blue-700 min-h-screen'>
+        <div className='min-h-screen'>
           <div className='flex gap-2 p-2 text-xl text-white bg-blue-900'>
             <Link to='/' className='[&.active]:font-bold [&.active]:uppercase'>
               Home
@@ -28,7 +28,9 @@ function RootComponent() {
             </Link>
           </div>
 
-          <Outlet />
+          <NuqsAdapter  >
+            <Outlet />
+          </NuqsAdapter>
         </div>
       </QueryClientProvider>
     </React.Fragment>

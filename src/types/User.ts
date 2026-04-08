@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-const UserSchema = z.object({
+export const UserSchema = z.object({
     id: z.string(),
     username: z.string().min(3),
     age: z.number().int().positive().default(1),

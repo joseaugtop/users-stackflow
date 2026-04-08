@@ -1,29 +1,41 @@
 import { useQuery } from '@tanstack/react-query';
-import UserContainer from '../../components/UserContainer/UserContainer';
 import { getUsers } from '../../services/userService';
 import { Spinner } from '@/components/ui/spinner';
+import { DataTable } from './data-table';
+import { columns } from './columns';
+import { useState } from 'react';
+import { PaginationState } from '@tanstack/react-table';
 
 export default function Users() {
 
+    const [pagination, setPagination] = useState<PaginationState>({
+        pageIndex: 0,
+        pageSize: 10,
+    })
     const { isPending, error, data } = useQuery({
-        queryKey: ['usersData'],
-        queryFn: () =>
-            getUsers()
+        queryKey: ['usersData', pagination.pageIndex],
+        queryFn: () => getUsers(pagination.pageIndex),
     })
 
 
     if (error) return 'An error has occurred: ' + error.message
 
-    ///depois vai ser uma tanstack table
     return (
         <div>
             {isPending ? (
                 <div><Spinner /></div>
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-5 my-5">
-                    {data.map((user) => (
-                        <UserContainer key={user.id} user={user} />
-                    ))}
+                <div>
+                    <h1 className='flex my-1 mx-5 text-4xl'>Usuários</h1>
+                    <div className='container mx-auto p-4'>
+                        <DataTable
+                            columns={columns}
+                            data={data.data}
+                            rowCount={data.items}
+                            pagination={pagination}
+                            onPaginationChange={setPagination}
+                        />
+                    </div>
                 </div>
             )}
         </div>
