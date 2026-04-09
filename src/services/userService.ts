@@ -3,8 +3,13 @@ import type { User } from "../types/User";
 
 export const getUsers = async (pageIndex: number = 1) => {
     const res = await axiosClient.get("/users", {
-        params: { _page: pageIndex + 1, _per_page: 10 },
+        params: { _page: pageIndex, _per_page: 10 },
     })
+    return res.data
+}
+
+export const getAllUsers = async () => {
+    const res = await axiosClient.get("/users")
     return res.data
 }
 
